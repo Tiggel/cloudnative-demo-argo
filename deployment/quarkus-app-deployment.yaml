@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: quarkus-app-deployment
+spec:
+  selector:
+    matchLabels:
+      app: quarkus-app
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: quarkus-app
+        version: 1.1.8
+    spec:
+      containers:
+      - name: quarkus-app
+        image: tiggel/quarkus-demo:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+      imagePullSecrets:
+        - name: dockercreds
