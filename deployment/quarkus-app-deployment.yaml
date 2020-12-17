@@ -14,10 +14,10 @@ spec:
         version: 1.1.8
     spec:
       containers:
-      - name: quarkus-app
-        image: tiggel/quarkus-demo:latest
-        imagePullPolicy: Always
-        ports:
-        - containerPort: 8080
+        - name: quarkus-app
+          image: tiggel/ibm-quarkus-demo:f3074176fa8cc013c933f6c82b5a4f2a666ccd70
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
       imagePullSecrets:
         - name: dockercreds
