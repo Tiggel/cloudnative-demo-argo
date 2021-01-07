@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: quarkus-app
-          image: tiggel/ibm-quarkus-demo:38f533aa93a1ff00666ae34cf2e5b507bc524f64
+          image: tiggel/ibm-quarkus-demo:1e620e68175e784a44cf41a0fda8897fd48e4a01
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
